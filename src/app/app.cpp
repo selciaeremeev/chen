@@ -2,10 +2,6 @@
 
 #include "app/app.hpp"
 
-App::App(void) {
-	return;
-}
-
 int App::Initialize(void) {
 	DxLib::SetOutApplicationLogValidFlag(FALSE);
 	DxLib::ChangeWindowMode(TRUE);
@@ -22,7 +18,7 @@ int App::Update(void) {
 }
 
 int App::Render(void) {
-
+	DxLib::PlayMovie("resources\\chen\\chen.gif", 1, DX_MOVIEPLAYTYPE_NORMAL);
 	return 0;
 }
 

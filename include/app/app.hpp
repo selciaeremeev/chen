@@ -11,7 +11,7 @@ public:
 	int			DEPTH = 16;
 	std::string NAME = "chen";
 
-	App(void);
+	App(void) {};
 
 	int Initialize(void);
 	int Update(void);
