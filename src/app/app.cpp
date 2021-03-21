@@ -2,6 +2,7 @@
 #include <DxLib.h>
 
 #include "app/app.hpp"
+#include "scene/battle.hpp"
 
 int App::Initialize(void) {
 	DxLib::SetOutApplicationLogValidFlag(FALSE);
@@ -13,17 +14,17 @@ int App::Initialize(void) {
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
 	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
-
+	SCENEMGR->scene.push(std::make_shared<Battle>());
 	return 0;
 }
 
 int App::Update(void) {
-	// SCENEMGR->scene.top()->Update();
+	SCENEMGR->scene.top()->Update();
 	return 0;
 }
 
 int App::Render(void) {
-	// SCENEMGR->scene.top()->Render();
+	SCENEMGR->scene.top()->Render();
 	return 0;
 }
 
