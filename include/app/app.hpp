@@ -3,13 +3,15 @@
 #include <string>
 #include <DxLib.h>
 
+#include "resources/resources.hpp"
+
 class App {
 public:
 
-	int			WIDTH = 640;
-	int			HEIGHT = 480;
-	int			DEPTH = 16;
-	std::string NAME = "chen";
+	const int			WIDTH = 640;
+	const int			HEIGHT = 480;
+	const int			DEPTH = 16;
+	const std::string   NAME = "chen";
 
 	App(void) {};
 
