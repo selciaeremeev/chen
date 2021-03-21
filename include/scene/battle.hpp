@@ -1,7 +1,6 @@
 #pragma once
 
-#include <DxLib.h>
-
+#include "DxLib.h"
 #include "scene/scene.hpp"
 
 class Battle : public Scene {

@@ -1,8 +1,4 @@
-#include <string>
-#include <DxLib.h>
-
 #include "app/app.hpp"
-#include "scene/battle.hpp"
 
 int App::Initialize(void) {
 	DxLib::SetOutApplicationLogValidFlag(FALSE);

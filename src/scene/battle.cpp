@@ -9,7 +9,9 @@ int Battle::Update(void) {
 }
 
 int Battle::Render(void) {
-
+#ifdef _DEBUG
+	DxLib::DrawString(0, 0, "Scene: Battle", DxLib::GetColor(255, 255, 255));
+#endif
 	return 0;
 }
 

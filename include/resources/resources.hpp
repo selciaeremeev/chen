@@ -2,7 +2,8 @@
 
 #include <map>
 #include <string>
-#include <DxLib.h>
+
+#include "DxLib.h"
 
 class Resources {
 public:

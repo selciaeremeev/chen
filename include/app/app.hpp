@@ -1,8 +1,9 @@
 #pragma once
 
 #include <string>
-#include <DxLib.h>
 
+#include "DxLib.h"
+#include "scene/battle.hpp"
 #include "scene/scenemgr.hpp"
 #include "resources/resources.hpp"
 
