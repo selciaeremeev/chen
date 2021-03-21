@@ -13,16 +13,17 @@ int App::Initialize(void) {
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
 	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
+
 	return 0;
 }
 
 int App::Update(void) {
-
+	// SCENEMGR->scene.top()->Update();
 	return 0;
 }
 
 int App::Render(void) {
-
+	// SCENEMGR->scene.top()->Render();
 	return 0;
 }
 

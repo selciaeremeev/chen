@@ -3,6 +3,7 @@
 #include <string>
 #include <DxLib.h>
 
+#include "scene/scenemgr.hpp"
 #include "resources/resources.hpp"
 
 class App {
