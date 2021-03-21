@@ -1,3 +1,4 @@
+#include <string>
 #include <DxLib.h>
 
 #include "app/app.hpp"
@@ -18,7 +19,7 @@ int App::Update(void) {
 }
 
 int App::Render(void) {
-	DxLib::PlayMovie("resources\\chen\\chen.gif", 1, DX_MOVIEPLAYTYPE_NORMAL);
+
 	return 0;
 }
 

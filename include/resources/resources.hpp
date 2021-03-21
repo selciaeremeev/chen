@@ -1,13 +1,18 @@
 #pragma once
 
-#include <vector>
+#include <map>
+#include <string>
+#include <DxLib.h>
 
 class Resources {
 public:
 
-	std::vector<char> resources;
+	std::map<std::string, int> graphics;
 
 	Resources(void) {};
+
+	int LoadGraph(const char* alias, const char* fileName);
+	int ReleaseGraph(void);
 
 	static Resources* GetInstance(void) {
 		static Resources instance;
