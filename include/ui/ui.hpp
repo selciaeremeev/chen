@@ -5,6 +5,11 @@
 
 class Ui {
 public:
+
+	float anim;
+	char alias[15];
+	char fileName[100];
+
 	int Initialize(void);
 	int Update(void);
 	int Render(void);

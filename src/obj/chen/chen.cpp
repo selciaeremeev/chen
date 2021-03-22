@@ -11,10 +11,6 @@ int Chen::Initialize(void) {
 }
 
 int Chen::Update(void) {
-# ifdef _DEBUG
-	DxLib::DrawFormatString(0, 100, DxLib::GetColor(255, 255, 255), "Anim: %f", Chen::anim);
-	DxLib::DrawFormatString(0, 120, DxLib::GetColor(255, 255, 255), "Alias: %s", Chen::alias);
-#endif
 	Chen::anim += 0.5;
 	if (Chen::anim == 29) Chen::anim = 0;
 	sprintf_s(Chen::alias, sizeof(Chen::alias), "chen-stand-%02d", int(Chen::anim));

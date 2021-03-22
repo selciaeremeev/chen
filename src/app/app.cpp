@@ -8,8 +8,6 @@ int App::Initialize(void) {
 	DxLib::DxLib_Init();
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
-	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
-	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
 	SCENEMGR->scene.push(std::make_shared<Battle>());
 	SCENEMGR->scene.top()->Initialize();
 	return 0;

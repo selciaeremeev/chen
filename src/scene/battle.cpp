@@ -3,6 +3,8 @@
 int Battle::Initialize(void) {
 	CHEN->Initialize();
 	UI->Initialize();
+	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
+	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
 	return 0;
 }
 
@@ -13,9 +15,6 @@ int Battle::Update(void) {
 }
 
 int Battle::Render(void) {
-#ifdef _DEBUG
-	DxLib::DrawString(0, 0, "Scene: Battle", DxLib::GetColor(255, 255, 255));
-#endif
 	CHEN->Render();
 	UI->Render();
 	return 0;
