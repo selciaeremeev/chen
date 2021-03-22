@@ -2,6 +2,8 @@
 
 #include "DxLib.h"
 #include "scene/scene.hpp"
+#include "obj/chen/chen.hpp"
+#include "ui/ui.hpp"
 
 class Battle : public Scene {
 public:

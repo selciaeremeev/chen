@@ -11,6 +11,7 @@ int App::Initialize(void) {
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
 	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
 	SCENEMGR->scene.push(std::make_shared<Battle>());
+	SCENEMGR->scene.top()->Initialize();
 	return 0;
 }
 
@@ -25,6 +26,7 @@ int App::Render(void) {
 }
 
 int App::Terminate(void) {
+	SCENEMGR->scene.top()->Terminate();
 	RESOURCES->ReleaseAll();
 	DxLib::DxLib_End();
 	return 0;
