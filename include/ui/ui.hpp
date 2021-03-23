@@ -6,9 +6,12 @@
 class Ui {
 public:
 
+	float count;
 	float anim;
 	char alias[15];
 	char fileName[100];
+
+	BOOL flag;
 
 	int Initialize(void);
 	int Update(void);

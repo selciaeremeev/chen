@@ -18,7 +18,7 @@ int Chen::Update(void) {
 }
 
 int Chen::Render(void) {
-	DxLib::DrawGraph(250, 50, RESOURCES->graphics[alias], FALSE);
+	DxLib::DrawGraph(260, 50, RESOURCES->graphics[alias], FALSE);
 	return 0;
 }
 
