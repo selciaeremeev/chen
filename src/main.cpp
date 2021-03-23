@@ -4,7 +4,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_  HINSTANCE hPrevInstance, 
 
 	APP->Initialize();
 
-	while (!DxLib::ScreenFlip() && !DxLib::ProcessMessage() && !DxLib::ClearDrawScreen()) {
+	while (!DxLib::ScreenFlip() && !DxLib::ProcessMessage() && !DxLib::ClearDrawScreen() && !APP->UpdateKeyStateAll()) {
 		APP->Update();
 		APP->Render();
 	}

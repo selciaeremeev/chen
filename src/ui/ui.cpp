@@ -17,21 +17,21 @@ int Ui::Initialize(void) {
 }
 
 int Ui::Update(void) {
-	if (DxLib::CheckHitKey(KEY_INPUT_SPACE) && Ui::anim == 0) Ui::flag = TRUE;
-	if (DxLib::CheckHitKey(KEY_INPUT_SPACE) && Ui::anim >= 35) Ui::flag = FALSE;
+	if (APP->KEY[KEY_INPUT_SPACE] && Ui::anim == 0) Ui::flag = TRUE;
+	if (APP->KEY[KEY_INPUT_SPACE] && Ui::anim >= 35) Ui::flag = FALSE;
 	if (Ui::flag) Ui::anim += Ui::count;
 	if (!Ui::flag) Ui::anim -= Ui::count;
 	if (Ui::anim >= 35) Ui::anim = 35;
 	if (Ui::anim <= 0) Ui::anim = 0;
 	sprintf_s(Ui::alias, sizeof(Ui::alias), "box-%02d", int(Ui::anim));
-	return 0;
+ 	return 0;
 }
 
 int Ui::Render(void) {
-#ifdef _DEBUG
+
 	DxLib::DrawFormatString(0, 0, DxLib::GetColor(255, 255, 255), "flag: %d (PRESS SPACE button to switch)", Ui::flag);
 	DxLib::DrawFormatString(0, 20, DxLib::GetColor(255, 255, 255), "anim: %f", Ui::anim);
-#endif
+
 	DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight"], FALSE);
 	DxLib::DrawGraph(188, 420, RESOURCES->graphics["act"], FALSE);
 	DxLib::DrawGraph(340, 420, RESOURCES->graphics["item"], FALSE);

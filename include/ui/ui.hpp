@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DxLib.h"
+#include "app/app.hpp"
 #include "resources/resources.hpp"
 
 class Ui {

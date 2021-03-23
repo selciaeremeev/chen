@@ -10,12 +10,15 @@
 class App {
 public:
 
+	int KEY[256] = { 0 };
 	const int			WIDTH = 640;
 	const int			HEIGHT = 480;
 	const int			DEPTH = 16;
 	const std::string   NAME = "chen";
 
 	App(void) {};
+
+	int UpdateKeyStateAll(void);
 
 	int Initialize(void);
 	int Update(void);

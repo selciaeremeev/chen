@@ -1,5 +1,19 @@
 #include "app/app.hpp"
 
+int App::UpdateKeyStateAll(void) {
+	char tempKey[256];
+	DxLib::GetHitKeyStateAll(tempKey);
+	for (int i = 0; i < 256; i++) {
+		if (tempKey[i] != 0) {
+			APP->KEY[i]++;
+		}
+		else {
+			APP->KEY[i] = 0;
+		}
+	}
+	return 0;
+}
+
 int App::Initialize(void) {
 	DxLib::SetOutApplicationLogValidFlag(FALSE);
 	DxLib::SetAlwaysRunFlag(TRUE);
