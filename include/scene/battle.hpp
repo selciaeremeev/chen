@@ -3,6 +3,7 @@
 #include "DxLib.h"
 #include "scene/scene.hpp"
 #include "obj/chen/chen.hpp"
+#include "obj/chara/chara.hpp"
 #include "ui/ui.hpp"
 
 class Battle final : public Scene {

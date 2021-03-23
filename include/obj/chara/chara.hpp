@@ -1,9 +1,15 @@
 #pragma once
 
+#include "DxLib.h"
+#include "app/app.hpp"
 #include "obj/obj.hpp"
+#include "resources/resources.hpp"
 
 class Chara final : public Obj {
 public:
+
+	int x = 308;
+	int y = 306;
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;
 	virtual int Render(void) override;
@@ -14,3 +20,5 @@ public:
 		return &instance;
 	}
 };
+
+#define CHARA Chara::GetInstance()
