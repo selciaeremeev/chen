@@ -4,7 +4,7 @@
 #include "app/app.hpp"
 #include "resources/resources.hpp"
 
-class Ui {
+class Ui final {
 public:
 
 	float count;

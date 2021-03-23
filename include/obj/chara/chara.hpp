@@ -1,14 +1,16 @@
 #pragma once
 
-#include "DxLib.h"
-#include "scene/scene.hpp"
-#include "obj/chen/chen.hpp"
-#include "ui/ui.hpp"
+#include "obj/obj.hpp"
 
-class Battle final : public Scene {
+class Chara final : public Obj {
 public:
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;
 	virtual int Render(void) override;
 	virtual int Terminate(void) override;
+
+	static Chara* GetInstance(void) {
+		static Chara instance;
+		return &instance;
+	}
 };

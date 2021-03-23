@@ -5,7 +5,7 @@
 
 #include "DxLib.h"
 
-class Resources {
+class Resources final {
 public:
 
 	std::map<std::string, int> sounds;

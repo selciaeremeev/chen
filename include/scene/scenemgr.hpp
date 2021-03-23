@@ -5,7 +5,7 @@
 
 #include "scene/scene.hpp"
 
-class SceneManager {
+class SceneManager final {
 public:
 	std::stack<std::shared_ptr<Scene>> scene;
 

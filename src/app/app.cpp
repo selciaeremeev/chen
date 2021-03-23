@@ -29,6 +29,7 @@ int App::Initialize(void) {
 
 int App::Update(void) {
 	SCENEMGR->scene.top()->Update();
+	if (App::KEY[KEY_INPUT_ESCAPE]) App::Terminate();
 	return 0;
 }
 

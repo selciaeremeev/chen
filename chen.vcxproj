@@ -27,6 +27,7 @@
   <ItemGroup>
     <ClCompile Include="src\app\app.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\obj\chara\chara.cpp" />
     <ClCompile Include="src\obj\chen\chen.cpp" />
     <ClCompile Include="src\obj\obj.cpp" />
     <ClCompile Include="src\resources\resources.cpp" />
@@ -37,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\app\app.hpp" />
+    <ClInclude Include="include\obj\chara\chara.hpp" />
     <ClInclude Include="include\obj\chen\chen.hpp" />
     <ClInclude Include="include\obj\obj.hpp" />
     <ClInclude Include="include\resources\resources.hpp" />

@@ -4,7 +4,7 @@
 #include "obj/obj.hpp"
 #include "resources/resources.hpp"
 
-class Chen : public Obj {
+class Chen final : public Obj {
 public:
 
 	float anim;

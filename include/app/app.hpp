@@ -7,7 +7,7 @@
 #include "scene/scenemgr.hpp"
 #include "resources/resources.hpp"
 
-class App {
+class App final {
 public:
 
 	int KEY[256] = { 0 };
@@ -32,3 +32,5 @@ public:
 };
 
 #define APP App::GetInstance()
+
+#define WHITE DxLib::GetColor(255, 255, 255)
