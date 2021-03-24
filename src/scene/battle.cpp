@@ -5,6 +5,8 @@ int Battle::Initialize(void) {
 	UI->Initialize();
 	CHARA->Initialize();
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
+	DxLib::PlayMovie("resources\\movies\\encounter.mp4", 1, DX_MOVIEPLAYTYPE_NORMAL);
+	DxLib::WaitTimer(1000);
 	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
 	return 0;
 }

@@ -3,8 +3,9 @@
 #include <string>
 
 #include "DxLib.h"
-#include "scene/battle.hpp"
 #include "scene/scenemgr.hpp"
+#include "scene/encounter.hpp"
+#include "scene/battle.hpp"
 #include "resources/resources.hpp"
 
 class App final {

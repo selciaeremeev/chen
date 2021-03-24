@@ -32,6 +32,7 @@
     <ClCompile Include="src\obj\obj.cpp" />
     <ClCompile Include="src\resources\resources.cpp" />
     <ClCompile Include="src\scene\battle.cpp" />
+    <ClCompile Include="src\scene\encounter.cpp" />
     <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\scene\scenemgr.cpp" />
     <ClCompile Include="src\ui\ui.cpp" />
@@ -43,6 +44,7 @@
     <ClInclude Include="include\obj\obj.hpp" />
     <ClInclude Include="include\resources\resources.hpp" />
     <ClInclude Include="include\scene\battle.hpp" />
+    <ClInclude Include="include\scene\encounter.hpp" />
     <ClInclude Include="include\scene\scene.hpp" />
     <ClInclude Include="include\scene\scenemgr.hpp" />
     <ClInclude Include="include\ui\ui.hpp" />
