@@ -5,8 +5,8 @@ int Encounter::Initialize(void) {
 }
 
 int Encounter::Update(void) {
-	SCENEMGR->scene.push(std::make_shared<Battle>());
-	SCENEMGR->scene.top()->Initialize();
+	// SCENEMGR->scene.push(std::make_shared<Battle>());
+	// SCENEMGR->scene.top()->Initialize();
 	return 0;
 }
 

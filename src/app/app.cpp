@@ -22,7 +22,7 @@ int App::Initialize(void) {
 	DxLib::DxLib_Init();
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
-	SCENEMGR->scene.push(std::make_shared<Encounter>());
+	SCENEMGR->scene.push(std::make_shared<Battle>());
 	SCENEMGR->scene.top()->Initialize();
 	return 0;
 }
