@@ -6,10 +6,10 @@ int Chara::Initialize(void) {
 }
 
 int Chara::Update(void) {
-	if (APP->KEY[KEY_INPUT_UP]) y -= 2;
-	if (APP->KEY[KEY_INPUT_DOWN]) y += 2;
-	if (APP->KEY[KEY_INPUT_LEFT]) x -= 2;
-	if (APP->KEY[KEY_INPUT_RIGHT]) x += 2;
+	if (APP->KEY[KEY_INPUT_UP]) y -= Chara::move;
+	if (APP->KEY[KEY_INPUT_DOWN]) y += Chara::move;
+	if (APP->KEY[KEY_INPUT_LEFT]) x -= Chara::move;
+	if (APP->KEY[KEY_INPUT_RIGHT]) x += Chara::move;
 	return 0;
 }
 

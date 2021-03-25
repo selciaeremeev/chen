@@ -10,6 +10,8 @@ public:
 
 	int x = 308;
 	int y = 306;
+	int move = 2;
+
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;
 	virtual int Render(void) override;
