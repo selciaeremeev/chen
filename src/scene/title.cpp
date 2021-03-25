@@ -16,7 +16,7 @@ int Title::Update(void) {
 }
 
 int Title::Render(void) {
-	DxLib::DrawGraph(0, 0, RESOURCES->graphics["title"], FALSE);
+	DxLib::DrawGraph(0, -50, RESOURCES->graphics["title"], FALSE);
 	return 0;
 }
 
