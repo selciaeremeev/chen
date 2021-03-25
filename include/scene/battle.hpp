@@ -9,6 +9,7 @@
 class Battle final : public Scene {
 private:
 	int bright = 0;
+	float speed = 1;
 public:
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;
