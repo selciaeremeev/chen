@@ -7,6 +7,8 @@
 #include "ui/ui.hpp"
 
 class Battle final : public Scene {
+private:
+	int bright = 0;
 public:
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;
