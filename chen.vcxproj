@@ -35,6 +35,7 @@
     <ClCompile Include="src\scene\encounter.cpp" />
     <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\scene\scenemgr.cpp" />
+    <ClCompile Include="src\scene\title.cpp" />
     <ClCompile Include="src\ui\ui.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,7 @@
     <ClInclude Include="include\scene\encounter.hpp" />
     <ClInclude Include="include\scene\scene.hpp" />
     <ClInclude Include="include\scene\scenemgr.hpp" />
+    <ClInclude Include="include\scene\title.hpp" />
     <ClInclude Include="include\ui\ui.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

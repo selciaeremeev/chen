@@ -4,8 +4,7 @@
 
 #include "DxLib.h"
 #include "scene/scenemgr.hpp"
-#include "scene/encounter.hpp"
-#include "scene/battle.hpp"
+#include "scene/title.hpp"
 #include "resources/resources.hpp"
 
 class App final {
