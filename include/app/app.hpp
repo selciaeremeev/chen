@@ -6,6 +6,9 @@
 #include "scene/scenemgr.hpp"
 #include "scene/title.hpp"
 #include "resources/resources.hpp"
+#include "ui/ui.hpp"
+#include "obj/chen/chen.hpp"
+#include "obj/chara/chara.hpp"
 
 class App final {
 public:

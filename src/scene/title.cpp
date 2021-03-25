@@ -1,12 +1,14 @@
 #include "scene/title.hpp"
 
 int Title::Initialize(void) {
-
+	RESOURCES->LoadGraph("title", "resources/graphics/title.png");
+	RESOURCES->LoadSound("heartbeat", "resources/sounds/heartbeat.wav");
+	DxLib::PlaySoundMem(RESOURCES->sounds["heartbeat"], DX_PLAYTYPE_BACK);
 	return 0;
 }
 
 int Title::Update(void) {
-	if (APP->KEY[KEY_INPUT_RETURN]) {
+	if (APP->KEY[KEY_INPUT_RETURN] || APP->KEY[KEY_INPUT_Z]) {
 		SCENEMGR->scene.push(std::make_shared<Encounter>());
 		SCENEMGR->scene.top()->Initialize();
 	}
@@ -14,7 +16,7 @@ int Title::Update(void) {
 }
 
 int Title::Render(void) {
-	DxLib::DrawString(0, 0, "test: PRESS ENTER", WHITE);
+	DxLib::DrawGraph(0, 0, RESOURCES->graphics["title"], FALSE);
 	return 0;
 }
 

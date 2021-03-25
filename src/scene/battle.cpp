@@ -1,9 +1,6 @@
 #include "scene/battle.hpp"
 
 int Battle::Initialize(void) {
-	CHEN->Initialize();
-	UI->Initialize();
-	CHARA->Initialize();
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");
 	DxLib::PlaySoundMem(RESOURCES->sounds["BGM"], DX_PLAYTYPE_LOOP);
 	return 0;

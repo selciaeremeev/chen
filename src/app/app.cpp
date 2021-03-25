@@ -22,6 +22,9 @@ int App::Initialize(void) {
 	DxLib::DxLib_Init();
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
 	DxLib::SetGraphMode(APP->WIDTH, APP->HEIGHT, APP->DEPTH);
+	UI->Initialize();
+	CHEN->Initialize();
+	CHARA->Initialize();
 	SCENEMGR->scene.push(std::make_shared<Title>());
 	SCENEMGR->scene.top()->Initialize();
 	return 0;

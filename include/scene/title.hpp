@@ -4,6 +4,7 @@
 #include "app/app.hpp"
 #include "scene/scene.hpp"
 #include "scene/scenemgr.hpp"
+#include "resources/resources.hpp"
 #include "scene/encounter.hpp"
 
 class Title final : public Scene {
