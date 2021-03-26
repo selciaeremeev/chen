@@ -4,10 +4,10 @@ int Ui::Initialize(void) {
 	Ui::count = 0.5;
 	Ui::anim = 0;
 	Ui::flag = TRUE;
-	RESOURCES->LoadGraph("fight", "resources\\ui\\fight.png");
-	RESOURCES->LoadGraph("act", "resources\\ui\\act.png");
-	RESOURCES->LoadGraph("item", "resources\\ui\\item.png");
-	RESOURCES->LoadGraph("mercy", "resources\\ui\\mercy.png");
+	RESOURCES->LoadGraph("fight-disable", "resources\\ui\\fight-disable.png");
+	RESOURCES->LoadGraph("act-disable", "resources\\ui\\act-disable.png");
+	RESOURCES->LoadGraph("item-disable", "resources\\ui\\item-disable.png");
+	RESOURCES->LoadGraph("mercy-disable", "resources\\ui\\mercy-disable.png");
 	for (int i = 0; i < 36; i++) {
 		sprintf_s(Ui::alias, sizeof(Ui::alias), "box-%02d", i);
 		sprintf_s(Ui::fileName, sizeof(Ui::fileName), "resources\\ui\\box-%02d.png", i);
@@ -28,14 +28,10 @@ int Ui::Update(void) {
 }
 
 int Ui::Render(void) {
-
-	DxLib::DrawFormatString(0, 0, DxLib::GetColor(255, 255, 255), "flag: %d (PRESS SPACE button to switch)", Ui::flag);
-	DxLib::DrawFormatString(0, 20, DxLib::GetColor(255, 255, 255), "anim: %f", Ui::anim);
-
-	DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight"], FALSE);
-	DxLib::DrawGraph(188, 420, RESOURCES->graphics["act"], FALSE);
-	DxLib::DrawGraph(340, 420, RESOURCES->graphics["item"], FALSE);
-	DxLib::DrawGraph(496, 420, RESOURCES->graphics["mercy"], FALSE);
+	DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight-disable"], FALSE);
+	DxLib::DrawGraph(188, 420, RESOURCES->graphics["act-disable"], FALSE);
+	DxLib::DrawGraph(340, 420, RESOURCES->graphics["item-disable"], FALSE);
+	DxLib::DrawGraph(496, 420, RESOURCES->graphics["mercy-disable"], FALSE);
 	DxLib::DrawGraph(-150, -50, RESOURCES->graphics[alias], TRUE);
 	return 0;
 }
