@@ -1,4 +1,4 @@
-#include "scene/battle.hpp"
+#include "scene/battle/battle.hpp"
 
 int Battle::Initialize(void) {
 	RESOURCES->LoadSound("BGM", "resources/sounds/bgm.mp3");

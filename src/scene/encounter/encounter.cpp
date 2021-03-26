@@ -1,4 +1,4 @@
-#include "scene/encounter.hpp"
+#include "scene/encounter/encounter.hpp"
 
 int Encounter::Initialize(void) {
 	RESOURCES->LoadGraph("encounter", "resources\\movies\\encounter.mp4");

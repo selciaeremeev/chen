@@ -1,4 +1,4 @@
-#include "scene/title.hpp"
+#include "scene/title/title.hpp"
 
 int Title::Initialize(void) {
 	RESOURCES->LoadGraph("title", "resources/graphics/title.png");

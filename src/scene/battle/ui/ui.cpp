@@ -1,4 +1,4 @@
-#include "ui/ui.hpp"
+#include "scene/battle/ui/ui.hpp"
 
 int Ui::Initialize(void) {
 	Ui::count = 0.5;

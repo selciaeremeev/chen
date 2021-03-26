@@ -31,12 +31,12 @@
     <ClCompile Include="src\obj\chen\chen.cpp" />
     <ClCompile Include="src\obj\obj.cpp" />
     <ClCompile Include="src\resources\resources.cpp" />
-    <ClCompile Include="src\scene\battle.cpp" />
-    <ClCompile Include="src\scene\encounter.cpp" />
+    <ClCompile Include="src\scene\battle\battle.cpp" />
+    <ClCompile Include="src\scene\battle\ui\ui.cpp" />
+    <ClCompile Include="src\scene\encounter\encounter.cpp" />
     <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\scene\scenemgr.cpp" />
-    <ClCompile Include="src\scene\title.cpp" />
-    <ClCompile Include="src\ui\ui.cpp" />
+    <ClCompile Include="src\scene\title\title.cpp" />
     <ClCompile Include="src\util\fader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -45,12 +45,12 @@
     <ClInclude Include="include\obj\chen\chen.hpp" />
     <ClInclude Include="include\obj\obj.hpp" />
     <ClInclude Include="include\resources\resources.hpp" />
-    <ClInclude Include="include\scene\battle.hpp" />
-    <ClInclude Include="include\scene\encounter.hpp" />
+    <ClInclude Include="include\scene\battle\battle.hpp" />
+    <ClInclude Include="include\scene\battle\ui\ui.hpp" />
+    <ClInclude Include="include\scene\encounter\encounter.hpp" />
     <ClInclude Include="include\scene\scene.hpp" />
     <ClInclude Include="include\scene\scenemgr.hpp" />
-    <ClInclude Include="include\scene\title.hpp" />
-    <ClInclude Include="include\ui\ui.hpp" />
+    <ClInclude Include="include\scene\title\title.hpp" />
     <ClInclude Include="include\util\fader.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
