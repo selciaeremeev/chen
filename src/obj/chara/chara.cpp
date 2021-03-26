@@ -3,8 +3,8 @@
 int Chara::Initialize(void) {
 	RESOURCES->LoadGraph("chara", "resources\\obj\\chara\\chara.png");
 	ZeroMemory(&(Chara::pos), sizeof(Chara::pos));
-	Chara::pos.x = 42;
-	Chara::pos.y = 430;
+	Chara::pos.x = Chara::FIGHT.x;
+	Chara::pos.y = Chara::FIGHT.y;
 	return 0;
 }
 
@@ -12,10 +12,11 @@ int Chara::Update(void) {
 	if (Chara::isCommand) {
 		if (APP->KEY[KEY_INPUT_RIGHT] == 1) {
 			Chara::commandState = (Chara::commandState + 1) % 4;
-			DxLib::PlaySoundMem(RESOURCES->sounds["pi"], DX_PLAYTYPE_BACK);
 		}
 		if (APP->KEY[KEY_INPUT_LEFT] == 1) {
 			Chara::commandState = (Chara::commandState + 3) % 4;
+		}
+		if (APP->KEY[KEY_INPUT_RIGHT] == 1 || APP->KEY[KEY_INPUT_LEFT] == 1) {
 			DxLib::PlaySoundMem(RESOURCES->sounds["pi"], DX_PLAYTYPE_BACK);
 		}
 	}

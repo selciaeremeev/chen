@@ -12,6 +12,8 @@ public:
 	char alias[15];
 	char fileName[100];
 
+	LPCSTR fontFileName = "resources\\fonts\\JF-Dot-Shinonome14.ttf";
+
 	BOOL flag;
 
 	int Initialize(void);
