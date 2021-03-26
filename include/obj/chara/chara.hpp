@@ -7,10 +7,14 @@
 
 class Chara final : public Obj {
 public:
+	VECTOR pos;
+	int commandState = 0;
+	BOOL isCommand = TRUE;
 
-	int x = 308;
-	int y = 306;
-	int move = 2;
+	const VECTOR FIGHT = { 42, 430, 0 };
+	const VECTOR ACT = { 196, 430, 0 };
+	const VECTOR ITEM = { 352, 430, 0 };
+	const VECTOR MERCY = { 508, 430, 0 };
 
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;

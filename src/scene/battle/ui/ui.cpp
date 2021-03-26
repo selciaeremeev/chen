@@ -4,10 +4,15 @@ int Ui::Initialize(void) {
 	Ui::count = 0.5;
 	Ui::anim = 0;
 	Ui::flag = TRUE;
+	RESOURCES->LoadGraph("fight-enable", "resources\\ui\\fight-enable.png");
 	RESOURCES->LoadGraph("fight-disable", "resources\\ui\\fight-disable.png");
+	RESOURCES->LoadGraph("act-enable", "resources\\ui\\act-enable.png");
 	RESOURCES->LoadGraph("act-disable", "resources\\ui\\act-disable.png");
+	RESOURCES->LoadGraph("item-enable", "resources\\ui\\item-enable.png");
 	RESOURCES->LoadGraph("item-disable", "resources\\ui\\item-disable.png");
+	RESOURCES->LoadGraph("mercy-enable", "resources\\ui\\mercy-enable.png");
 	RESOURCES->LoadGraph("mercy-disable", "resources\\ui\\mercy-disable.png");
+	RESOURCES->LoadSound("pi", "resources\\sounds\\pi.wav");
 	for (int i = 0; i < 36; i++) {
 		sprintf_s(Ui::alias, sizeof(Ui::alias), "box-%02d", i);
 		sprintf_s(Ui::fileName, sizeof(Ui::fileName), "resources\\ui\\box-%02d.png", i);
@@ -28,10 +33,26 @@ int Ui::Update(void) {
 }
 
 int Ui::Render(void) {
-	DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight-disable"], FALSE);
-	DxLib::DrawGraph(188, 420, RESOURCES->graphics["act-disable"], FALSE);
-	DxLib::DrawGraph(340, 420, RESOURCES->graphics["item-disable"], FALSE);
-	DxLib::DrawGraph(496, 420, RESOURCES->graphics["mercy-disable"], FALSE);
+	if (CHARA->pos.x == CHARA->FIGHT.x && CHARA->pos.y == CHARA->FIGHT.y) {
+		DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight-enable"], FALSE);
+	} else {
+		DxLib::DrawGraph(35, 420, RESOURCES->graphics["fight-disable"], FALSE);
+	}
+	if (CHARA->pos.x == CHARA->ACT.x && CHARA->pos.y == CHARA->ACT.y) {
+		DxLib::DrawGraph(188, 420, RESOURCES->graphics["act-enable"], FALSE);
+	} else {
+		DxLib::DrawGraph(188, 420, RESOURCES->graphics["act-disable"], FALSE);
+	}
+	if (CHARA->pos.x == CHARA->ITEM.x && CHARA->pos.y == CHARA->ITEM.y) {
+		DxLib::DrawGraph(346, 420, RESOURCES->graphics["item-enable"], FALSE);
+	} else {
+		DxLib::DrawGraph(346, 420, RESOURCES->graphics["item-disable"], FALSE);
+	}
+	if (CHARA->pos.x == CHARA->MERCY.x && CHARA->pos.y == CHARA->MERCY.y) {
+		DxLib::DrawGraph(502, 420, RESOURCES->graphics["mercy-enable"], FALSE);
+	} else {
+		DxLib::DrawGraph(502, 420, RESOURCES->graphics["mercy-disable"], FALSE);
+	}
 	DxLib::DrawGraph(-150, -50, RESOURCES->graphics[alias], TRUE);
 	return 0;
 }
