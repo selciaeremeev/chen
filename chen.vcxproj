@@ -37,6 +37,7 @@
     <ClCompile Include="src\scene\scenemgr.cpp" />
     <ClCompile Include="src\scene\title.cpp" />
     <ClCompile Include="src\ui\ui.cpp" />
+    <ClCompile Include="src\util\fader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\app\app.hpp" />
@@ -50,6 +51,7 @@
     <ClInclude Include="include\scene\scenemgr.hpp" />
     <ClInclude Include="include\scene\title.hpp" />
     <ClInclude Include="include\ui\ui.hpp" />
+    <ClInclude Include="include\util\fader.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

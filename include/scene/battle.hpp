@@ -6,10 +6,11 @@
 #include "obj/chara/chara.hpp"
 #include "ui/ui.hpp"
 
+#include "util/fader.hpp"
+
 class Battle final : public Scene {
 private:
-	int bright = 0;
-	float speed = 1;
+	Fader fader;
 public:
 	virtual int Initialize(void) override;
 	virtual int Update(void) override;

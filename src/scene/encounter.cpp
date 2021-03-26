@@ -8,6 +8,7 @@ int Encounter::Initialize(void) {
 
 int Encounter::Update(void) {
 	if (!DxLib::GetMovieStateToGraph(RESOURCES->graphics["encounter"])) {
+		DxLib::SetDrawBright(0, 0, 0);
 		SCENEMGR->scene.push(std::make_shared<Battle>());
 		SCENEMGR->scene.top()->Initialize();
 	}
