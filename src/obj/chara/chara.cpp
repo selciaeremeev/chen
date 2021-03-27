@@ -19,8 +19,22 @@ int Chara::Update(void) {
 		if (APP->KEY[KEY_INPUT_RIGHT] == 1 || APP->KEY[KEY_INPUT_LEFT] == 1) {
 			DxLib::PlaySoundMem(RESOURCES->sounds["pi"], DX_PLAYTYPE_BACK);
 		}
-	}
-	if (!Chara::isCommand) {
+		if (Chara::commandState == COMMAND_STATE_FIGHT && APP->KEY[KEY_INPUT_Z] == 1) {
+			
+		}
+		if (Chara::commandState == COMMAND_STATE_ACT && APP->KEY[KEY_INPUT_Z] == 1) {
+
+		}
+		if (Chara::commandState == COMMAND_STATE_ITEM && APP->KEY[KEY_INPUT_Z] == 1) {
+
+		}
+		if (Chara::commandState == COMMAND_STATE_MERCY && APP->KEY[KEY_INPUT_Z] == 1) {
+
+		}
+		if ((Chara::commandState == COMMAND_STATE_FIGHT || Chara::commandState == COMMAND_STATE_ACT || Chara::commandState == COMMAND_STATE_ITEM || Chara::commandState == COMMAND_STATE_MERCY) && APP->KEY[KEY_INPUT_Z] == 1) {
+			DxLib::PlaySoundMem(RESOURCES->sounds["piko"], DX_PLAYTYPE_BACK);
+		}
+	} else {
 		if (APP->KEY[KEY_INPUT_UP]) Chara::pos.y -= 2;
 		if (APP->KEY[KEY_INPUT_DOWN]) Chara::pos.y += 2;
 		if (APP->KEY[KEY_INPUT_LEFT]) Chara::pos.x -= 2;

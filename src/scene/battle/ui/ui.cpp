@@ -15,6 +15,7 @@ int Ui::Initialize(void) {
 	AddFontResourceEx(Ui::fontFileName, FR_PRIVATE, NULL);
 	DxLib::ChangeFont("JFドット東雲ゴシック14", DX_CHARSET_DEFAULT);
 	RESOURCES->LoadSound("pi", "resources\\sounds\\pi.wav");
+	RESOURCES->LoadSound("piko", "resources\\sounds\\piko.wav");
 	for (int i = 0; i < 36; i++) {
 		sprintf_s(Ui::alias, sizeof(Ui::alias), "box-%02d", i);
 		sprintf_s(Ui::fileName, sizeof(Ui::fileName), "resources\\ui\\box-%02d.png", i);
@@ -56,7 +57,6 @@ int Ui::Render(void) {
 		DxLib::DrawGraph(502, 420, RESOURCES->graphics["mercy-disable"], FALSE);
 	}
 	DxLib::DrawGraph(-150, -50, RESOURCES->graphics[alias], TRUE);
-	DrawString(10, 240, "CHARA", GetColor(255, 255, 255));
 	return 0;
 }
 

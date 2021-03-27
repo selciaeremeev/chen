@@ -5,11 +5,18 @@
 #include "obj/obj.hpp"
 #include "resources/resources.hpp"
 
+constexpr int COMMAND_STATE_FIGHT	= 0;
+constexpr int COMMAND_STATE_ACT		= 1;
+constexpr int COMMAND_STATE_ITEM	= 2;
+constexpr int COMMAND_STATE_MERCY	= 3;
+
 class Chara final : public Obj {
 public:
 	VECTOR pos;
 	int commandState = 0;
 	BOOL isCommand = TRUE;
+
+	enum struct COMMAND_STATE { FIGHT, ACT, ITEM, MERCT };
 
 	const VECTOR FIGHT = { 42, 430, 0 };
 	const VECTOR ACT = { 196, 430, 0 };
