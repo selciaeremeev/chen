@@ -12,6 +12,8 @@ int Ui::Initialize(void) {
 	RESOURCES->LoadGraph("item-disable", "resources\\ui\\item-disable.png");
 	RESOURCES->LoadGraph("mercy-enable", "resources\\ui\\mercy-enable.png");
 	RESOURCES->LoadGraph("mercy-disable", "resources\\ui\\mercy-disable.png");
+	RESOURCES->LoadGraph("state", "resources\\ui\\state.png");
+	RESOURCES->LoadGraph("hp", "resources\\ui\\hp.png");
 	AddFontResourceEx(Ui::fontFileName, FR_PRIVATE, NULL);
 	DxLib::ChangeFont("JFドット東雲ゴシック14", DX_CHARSET_DEFAULT);
 	RESOURCES->LoadSound("pi", "resources\\sounds\\pi.wav");
@@ -56,6 +58,9 @@ int Ui::Render(void) {
 	} else {
 		DxLib::DrawGraph(502, 420, RESOURCES->graphics["mercy-disable"], FALSE);
 	}
+	DxLib::DrawGraph(34, 392, RESOURCES->graphics["state"], FALSE);
+	DxLib::DrawGraph(188, 393, RESOURCES->graphics["hp"], FALSE);
+	DxLib::DrawBox(220, 390, 300, 410, WHITE, TRUE);
 	DxLib::DrawGraph(-150, -50, RESOURCES->graphics[alias], TRUE);
 	return 0;
 }
